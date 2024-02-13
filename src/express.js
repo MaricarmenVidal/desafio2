@@ -20,8 +20,8 @@ app.get("/products",async (req,res)=>{
     res.send(limitProduct)
 })
 
-app.get("/products/:id",async (req,res)=>{
-    const filtrarId = parseInt(req.params.id)
+app.get("/products/:pid",async (req,res)=>{
+    const filtrarId = parseInt(req.params.pid)
     let products= await allProducts
     let productId= products.find(product => product.id===filtrarId)
     res.send(productId)
